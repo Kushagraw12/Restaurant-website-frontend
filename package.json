@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server"
   },
-  "author": "",
+  "author": "Kushagra Wadhwa",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.3.0"
@@ -17,5 +17,10 @@
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://KushagraWadhwa@bitbucket.org/KushagraWadhwa/bootsrap-intro.git"
+  },
+  "homepage": "https://bitbucket.org/KushagraWadhwa/bootsrap-intro#readme"
 }
