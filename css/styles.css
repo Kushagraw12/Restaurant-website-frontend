@@ -37,3 +37,12 @@ body{
 .navbar-dark{
     background-color: #512da8;
 }
+@media(min-width:500px){
+    .pd{
+        padding-left: 40px;
+    }
+}
+ .card{
+     margin-bottom: 40px;
+ }
+
