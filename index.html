@@ -16,6 +16,9 @@
 </head>
 
 <body>
+
+<!--NAV-BAR-->
+
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -37,6 +40,8 @@
          </div>
         </div>
     </nav>
+    
+<!--MODAL-LOG IN-->
 
     <div id="loginmodal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
@@ -55,7 +60,7 @@
                                 <input type="email" class="form-control form-control-sm mr-1" placeholder="Email" id="exampleinputemail">
                             </div>
                             <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword"Password: ></label>
+                                <label class="sr-only" for="exampleInputPassword">Password: ></label>
                                 <input type="password" class="form-control form-control-sm mr-1" placeholder="Password" id="exampleinputpassword">
                             </div>
                             <div class="col-sm-auto">
@@ -74,6 +79,9 @@
             </div>
         </div>
     </div>
+
+<!--HEADER-->
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -85,13 +93,83 @@
                     <img src="/img/img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    
-                    <a href="#rt" class="btn btn-block btn-warning btn-sm" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+91-8800049870</strong>" data-placement="bottom">Reserve Table</a>
-                    
+                    <a data-target="#rm" data-toggle="modal" class="btn btn-block btn-warning btn-sm">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
+
+<!--MODAL-RESERVE TABLE-->
+
+<div id="rm" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Reserve a Table</h3>
+                <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-sm-3">
+                            <label for="numguest" class="form-label">Number of Guests: </label>   
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="radio-inline"><input name="guests" type="radio" value="1" id="guests"> 1 </label>
+                            <label class="radio-inline"><input name="guests" type="radio" value="2" id="guests"> 2 </label>
+                            <label class="radio-inline"><input name="guests" type="radio" value="3" id="guests"> 3 </label>
+                            <label class="radio-inline"><input name="guests" type="radio" value="4" id="guests"> 4 </label>
+                            <label class="radio-inline"><input name="guests" type="radio" value="5" id="guests"> 5 </label>
+                            <label class="radio-inline"><input name="guests" type="radio" value="6" id="guests"> 6 </label>
+                        </div>
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="form-group col-sm-3">
+                            <label for="typeoftable" class="form-label">Type Of Table: </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                  <input type="radio" class="active" name="typeoftable" id="non-smoking" checked="checked"> Non-Smoking 
+                                </label>
+                                <label class="btn btn-danger">
+                                    <input type="radio" name="typeoftable" value="smoking" id="smoking">Smoking
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-3">
+                            <label for="dnt" class="form-label">Date and Time: </label>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="text" placeholder="Date" vlaue="date" name="date" id="date" class="date">
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="text" placeholder="Time" vlaue="time" name="time" id="time" class="time-picker">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group form-row col-sm-6">
+                        
+                            <button type="button" class="btn btn-secondary btn-sm mr-1" data-dismiss="modal">
+                              CANCEL
+                            </button>
+                            <button type="submit" class="btn btn-primary btn-sm mr-0">
+                                RESERVE 
+                            </button>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+<!--CAROUSEL-->
 
     <div class="container">
         <div class="row row-content">
@@ -136,6 +214,8 @@
             </div>
         </div>
 
+<!--MIDDLE CONTENT-->
+
         <div class="row row-content align-items-center">
             <div class=" col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -151,7 +231,6 @@
             </div>
         </div>
 
-
         <div class="row row-content align-items-center">
             <div class=" col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
@@ -159,7 +238,7 @@
             <div class="col col-sm col-md">
                 <div class="media">
                     <div class="media-body">
-                        <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <h2 lcass="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
                         <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                     </div>
                     <img class="d-flex img-thumbnail ml-3 align-self-center" src="/img/img/buffet.png" alt="Buffet">
@@ -181,47 +260,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <br>
-        <br>     
-            <div class="col-12 col-sm-11 col-xs-12 pd align-self-center">
-                <form>
-                <div class="card" id="rt">
-                    <h3 class="card-header text-white bg-warning mb-3">Reserve a Table</h3>
-                <div class="card-body">
-                    <div class="form-group row">
-                        <label for="numguest" class="col-12 col-sm-12 col-md-2 col-form-label">Number of Guests: </label>   
-                       
-                        <div class="radio col-sm-10">
-                            <label class="radio-inline"><input name="guests" type="radio" value="1" id="guests"> 1 </label>
-                            <label class="radio-inline"><input name="guests" type="radio" value="2" id="guests"> 2 </label>
-                            <label class="radio-inline"><input name="guests" type="radio" value="3" id="guests"> 3 </label>
-                            <label class="radio-inline"><input name="guests" type="radio" value="4" id="guests"> 4 </label>
-                            <label class="radio-inline"><input name="guests" type="radio" value="5" id="guests"> 5 </label>
-                            <label class="radio-inline"><input name="guests" type="radio" value="6" id="guests"> 6 </label>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="dnt" class="col-12 col-sm-12 col-md-2 col-form-label">Date and Time: </label>
-                        <div class="col-sm-5">
-                            <input type="text" placeholder="Date" vlaue="date" name="date" id="date" class="date">
-                        </div>
-                        <div class="col-sm-5">
-                            <input type="text" placeholder="Time" vlaue="time" name="time" id="time" class="time-picker">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-primary">
-                                Reserve
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                </div>
-               </form>
-            </div>
+        </div>  
+        
+            
     </div>
+
+<!--FOOTER-->
 
     <footer class="footer">
         <div class="container">
@@ -268,11 +312,7 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script>
-      $(document).ready(function() {
-          $('[data-toggle="tooltip"]').tooltip();
-      });
-  </script>
+
 </body>
 
 </html>
