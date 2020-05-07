@@ -152,15 +152,15 @@
                         </div>
                     </div>
                     
-                    <div class="form-group form-row col-sm-6">
-                        
+                    <div class="form-group form-row">
+                        <div class="col -sm-6 offset-sm-2">
                             <button type="button" class="btn btn-secondary btn-sm mr-1" data-dismiss="modal">
                               CANCEL
                             </button>
                             <button type="submit" class="btn btn-primary btn-sm mr-0">
                                 RESERVE 
                             </button>
-                        
+                        </div>
                     </div>
                 </form>
             </div>
@@ -210,6 +210,14 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -312,6 +320,20 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!--jQuery Controls-->
+  
+  <script>
+    $(document).ready(function(){
+        $("#mycarousel").carousel( { interval: 2000 } );
+        $("#carousel-pause").click(function(){
+            $("#mycarousel").carousel('pause');
+        });
+        $("#carousel-play").click(function(){
+            $("#mycarousel").carousel('cycle');
+        });
+    });
+  </script>
 
 </body>
 
